@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HackerLab AI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
+    }
+
+    /* Header */
+    header {
+      background-color: #1e293b;
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    header strong {
+      font-size: 1.2rem;
+      white-space: nowrap;
+      color: #00ffff;
+      font-weight: bold;
+    }
+
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 6rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #00ffff;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .login {
+      background-color: #00ffff;
+      border: none;
+      color: #000000;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login:hover {
+      background-color: #e2e8f0;
+      color: #0f172a;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .row {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .center-row {
+      justify-content: center;
+    }
+
+    .image-box {
+      width: 350px;
+      height: 500px;
+      background-color: #111;
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1rem;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e293b;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      color: #00ffff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <strong>HackerLab AI</strong>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="About.html">About Us</a>
+      <a href="Certification.html">Certification</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+
+    <button class="login">Login</button>
+  </header>
+
+  <main>
+    <div class="row">
+      <div class="image-box"><img src="level 1.jpg" alt="Level 1"></div>
+      <div class="image-box"><img src="level 2.png" alt="Level 2"></div>
+      <div class="image-box"><img src="level 3.png" alt="Level 3"></div>
+    </div>
+    <div class="row center-row">
+      <div class="image-box"><img src="level 4.png" alt="Level 4"></div>
+      <div class="image-box"><img src="level 5.png" alt="Level 5"></div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 HackerLab AI — All rights reserved.
+  </footer>
+
+</body>
+</html>

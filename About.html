@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | HackerLab AI</title>
+  <style>
+    :root {
+      --tech-green: #4ade80;
+      --accent-blue: #38bdf8;
+      --soft-white: #e2e8f0;
+      --cyan: #06b6d4;
+      --cyan-hover: #0891b2;
+      --neon-yellow: #faff00;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f172a;
+      color: var(--soft-white);
+      line-height: 1.9;
+    }
+
+    header {
+      background-color: #1e293b;
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+	  box-shadow: 0 0 10px #0ff;
+	  }
+
+    header strong {
+      font-size: 1.2rem;
+      white-space: nowrap;
+	  color: #00ffff;
+	  font-weight: bold;
+    }
+
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 6rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #00ffff;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .login {
+      background-color: #00ffff;
+      border: none;
+      color: #000000;
+	  font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login:hover {
+      background-color: #e2e8f0;
+      color: #0f172a;
+    }
+
+    main {
+      padding: 0;
+      margin: 0;
+    }
+
+    .hero-section {
+      background-color: var(--tech-green);
+      color: #0f172a;
+      text-align: center;
+      padding: 1rem 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-section h1 {
+      font-size: 1.8rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .hero-section p {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 2;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 2rem;
+    }
+
+    section {
+      margin-top: 2.5rem;
+    }
+
+    h2 {
+      color: var(--tech-green);
+      margin-bottom: 0.8rem;
+    }
+
+    .our-story {
+      margin-top: 1.5rem;
+    }
+
+    .values-title {
+      font-weight: bold;
+      font-variant: small-caps;
+      font-size: 1.2rem;
+      color: var(--accent-blue);
+    }
+
+    p, ul {
+      text-align: justify;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .cta {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      color: var(--accent-blue);
+    }
+
+    .join-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .join-btn {
+      background-color: var(--cyan);
+      border: none;
+      color: white;
+      padding: 0.7rem 2rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .join-btn:hover {
+      background-color: var(--cyan-hover);
+      transform: translateY(-2px);
+    }
+
+    .join-btn:active {
+      background-color: var(--neon-yellow);
+      color: #0f172a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e293b;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+	  color: #00ffff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <strong>HackerLab AI</strong>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Howitworks.html">How it works</a>
+      <a href="Certification.html">Certification</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <button class="login">Login</button>
+  </header>
+
+  <main>
+    <div class="hero-section">
+      <h1>We boost your professional future with challenges that count as experience</h1>
+      <p>HackerLab AI transforms learning into a game—Tackle real‑world tech missions, level up your skills, and showcase achievements that speak louder than words.</p>
+    </div>
+
+    <div class="content">
+      <section class="our-story">
+        <h2>Our Story</h2>
+        <p>HackerLab started one weekend when a bunch of friends—mentors, devs, and gamers—were struck by a simple idea: learning should be as addictive as playing. Today, that idea drives a global community where thousands of students rack up XP as they become tech experts.</p>
+      </section>
+
+      <section>
+        <h2>Our Values</h2>
+        <p class="values-title">Play, Progress, Purpose</p>
+        <p>Curiosity fuels mastery: Every achievement, every spot on the leaderboard, and every team mission fuels your fire.</p>
+      </section>
+
+      <section>
+        <h2>Inclusion & Diversity</h2>
+        <p>Technology builds the future for everyone, so everyone should help build it. We foster a welcoming space where gender, ethnicity, background, and neurodiversity are not barriers but strengths. Scholarship paths and adaptive challenges ensure no talent is left behind.</p>
+      </section>
+
+      <section>
+        <h2>What We Do</h2>
+        <ul>
+          <li>Mission‑based curriculum aligned with real job roles.</li>
+          <li>Live leaderboards, XP and badges that showcase progress publicly.</li>
+          <li>Mentor‑guided boss battles—team sprints that mirror industry hackathons.</li>
+          <li>A personal portfolio auto‑generated as you conquer each quest.</li>
+          <li>Hiring partners scouting our top performers for internships and full‑time roles.</li>
+        </ul>
+      </section>
+
+      <div class="cta">Ready to level up?</div>
+      <div class="join-container">
+        <a href="#" class="join-btn">Join Now</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 HackerLab AI — All rights reserved.
+  </footer>
+
+</body>
+</html>

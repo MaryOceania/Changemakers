@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HackerLab AI - Plataforma</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d111c;
+      color: #38fdfd;
+    }
+    header {
+      width: 100%;
+      background-color: #111827;
+      padding: 0.2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #22d3ee;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      border: 2px solid #22d3ee;
+      background: white url('https://i.pravatar.cc/50') center/cover;
+      margin-left: 1rem; 
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #1e293b;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+    }
+    h1 {
+      color: #00ffe3;
+      text-align: center;
+      font-size: 2rem;
+    }
+    p {
+      color: #94a3b8;
+    }
+    .progress {
+      margin: 1rem 0;
+	  margin-left: 2rem;
+    }
+    .progress-bar {
+      height: 15px;
+      background-color: #334155;
+      border-radius: 10px;
+      overflow: hidden;
+	  width: 95%;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 2%;
+      background: linear-gradient(to right, #00f0ff, #d946ef);
+    }
+    .start-btn, .start-mission, .check-btn {
+      display: block;
+      margin: 2rem auto;
+      background: linear-gradient(to right, #8b5cf6, #ec4899);
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .start-btn:hover, .start-mission:hover, .check-btn:hover {
+      transform: scale(1.05);
+    }
+    .lesson {
+      margin-top: 2rem;
+      background-color: #0f172a;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid #475569;
+    }
+    .quiz label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #fcd34d;
+    }
+    .quiz input[type="radio"] {
+      margin-right: 0.5rem;
+    }
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 2rem;
+      margin-top: 2rem;
+      color: #f472b6;
+    }
+    .welcome-text {
+      text-align: center;
+      margin-top: 1rem; /* antes: 1cm */
+      margin-bottom: 1rem; /* antes: 2rem */
+    }
+    .mission-brief {
+      background-color: #0f172a;
+      padding: 0.2rem 2rem;
+      border: 2px solid #334155;
+      border-radius: 12px;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      color: #cbd5e1;
+    }
+    .mission-brief h2 {
+      color: #facc15;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center;">
+      <div class="logo">HackerLab AI</div>
+      <div class="avatar"></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="welcome-text">
+      <h1>Welcome, Agent!</h1>
+      <p>Your mission begins now. Learn to defend systems, earn badges, and level up your cyber-skills.</p>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <p>1 of 50 missions completed</p>
+    </div>
+
+    <button class="start-btn" onclick="document.querySelector('.lesson').style.display='block'">
+      Start Lesson 1: Security Basics
+    </button>
+
+    <div class="lesson" style="display:none">
+      <h2>Lesson 1: What is Cybersecurity?</h2>
+      <p>Cybersecurity protects systems, networks, and data from digital attacks.</p>
+
+      <div class="quiz">
+        <p><strong>Question:</strong> What is the main goal of cybersecurity?</p>
+        <label><input type="radio" name="q1"> Create video games</label>
+        <label><input type="radio" name="q1"> Protect systems and data</label>
+        <label><input type="radio" name="q1"> Share passwords</label>
+      </div>
+
+      <button class="check-btn">✅ Check Answer</button>
+    </div>
+
+    <div class="mission-brief">
+      <h2>🛡️ Mission 1: First Shield</h2>
+      <p><strong>Objective:</strong> Identify common cyberattacks and their tactics.</p>
+      <p><strong>Estimated Time:</strong> 15 minutes</p>
+      <p><strong>Difficulty:</strong> ⭐☆☆☆☆</p>
+      <button class="start-mission"> Begin Mission</button>
+    </div>
+  </main>
+</body>
+</html>

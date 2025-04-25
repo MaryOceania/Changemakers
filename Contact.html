@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | HackerLab AI</title>
+  <style>
+    :root {
+      --tech-green: #4ade80;
+      --accent-blue: #38bdf8;
+      --soft-white: #e2e8f0;
+      --cyan: #06b6d4;
+      --cyan-hover: #0891b2;
+      --neon-yellow: #faff00;
+      --bg-dark: #0f172a;
+      --bg-header: #1e293b;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--soft-white);
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .wrapper {
+      min-height: calc(100vh - 2rem);
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: var(--bg-header);
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+	  box-shadow: 0 0 10px #0ff;
+    }
+
+    header strong {
+      font-size: 1.2rem;
+      white-space: nowrap;
+	  color: #00ffff;
+	  font-weight: bold;
+    }
+
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 6rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #00ffff;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .login {
+      background-color: #00ffff;
+      border: none;
+      color: #000000;
+      font-weight: bold;
+	  font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+	  box-sizing: border-box;
+	  }
+
+    .login:hover {
+      background-color: #e2e8f0;
+      color: #0f172a;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 1rem auto;
+      padding: 1rem;
+      flex: 1;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--tech-green);
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    input, select, textarea {
+      padding: 0.45rem;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+      background-color: #1e293b;
+      color: var(--soft-white);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 60px;
+      max-height: 100px;
+    }
+
+    button {
+      background-color: var(--cyan);
+      color: white;
+      font-weight: bold;
+      padding: 0.6rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--cyan-hover);
+    }
+
+    .alt-contact {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .alt-contact p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .alt-contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .alt-contact-icons img {
+      width: 28px;
+      height: 28px;
+      filter: brightness(1.2);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--bg-header);
+      font-size: 0.9rem;
+	  color: #00ffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <strong>HackerLab AI</strong>
+      <nav>
+        <a href="Index.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="Howitworks.html">How it works</a>
+        <a href="Certification.html">Certification</a>
+              </nav>
+      <button class="login">Login</button>
+    </header>
+
+    <main>
+      <h1>Let's Talk</h1>
+      <p>Got questions, feedback or want to partner with us? Drop us a message—we reply fast.</p>
+
+      <form>
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="role">I'm contacting you as…</label>
+        <select id="role" name="role">
+          <option>Student</option>
+          <option>Company / Recruiter</option>
+          <option>Other</option>
+        </select>
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <label><input type="checkbox" name="reply" /> I'd like a reply</label>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="alt-contact">
+        <p>Prefer email? Write us at <strong>support@hackerlab.ai</strong></p>
+        <p>Or find us on:</p>
+        <div class="alt-contact-icons">
+          <img src="discord.png" alt="Discord">
+          <img src="slack.png" alt="Slack">
+          <img src="linkedin.png" alt="LinkedIn">
+        </div>
+        <p style="margin-top: 1rem;">Need help? Visit our FAQ (coming soon)</p>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    © 2025 HackerLab AI — All rights reserved.
+  </footer>
+
+  <!-- Chatbot integration -->
+  <script>
+    window.chatbaseConfig = {
+      chatbotId: "TU_CHATBOT_ID"
+    }
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" id="chatbase-script" defer></script>
+</body>
+</html>

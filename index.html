@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HackerLab AI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
+    }
+
+    /* Header */
+    header {
+      background-color: #1e293b;
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+	  box-shadow: 0 0 10px #0ff;
+    }
+    header strong {
+      font-size: 1.2rem;
+      white-space: nowrap;
+      color: #00ffff;
+      font-weight: bold;
+    }
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 6rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #00ffff;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .login {
+      background-color: #00ffff;
+      border: none;
+      color: #000000;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .login:hover {
+      background-color: #e2e8f0;
+      color: #0f172a;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 1rem 2rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .buttons button {
+      padding: 0.75rem 1.5rem;
+      margin: 0 0.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .get-started {
+      background-color: #34d399;
+      color: #0f172a;
+    }
+    .watch-demo {
+      background-color: #334155;
+      color: #e2e8f0;
+    }
+
+    /* Features */
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      padding: 2rem;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+    .features img {
+      border-radius: 8px;
+      margin-left: 1cm;
+    }
+
+    /* Testimonial & footer */
+    .testimonial {
+      text-align: center;
+      font-style: italic;
+      margin: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e293b;
+      font-size: 0.9rem;
+	  color: #00ffff;
+    }
+
+    /* Demo Video Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 800px;
+    }
+    .close {
+      color: white;
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    video {
+      width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>HackerLab AI</strong>
+
+    <nav>
+      <a href="About.html">About Us</a>
+      <a href="Howitworks.html"> How it works</a>
+      <a href="Certification.html">Certification</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+
+    <button class="login">Login</button>
+  </header>
+
+  <section class="hero">
+    <h1><br>Defend, Certify, Employ</h1>
+    <br>
+    <div class="buttons">
+      <button class="get-started" onclick="openModal()">Watch Demo</button>
+      <a href="mision.html" style="text-decoration: none;">
+        <button class="watch-demo">Get Started</button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Demo Video Modal -->
+  <div id="demoModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <video controls>
+        <source src="demo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <section class="features">
+    <div>
+      <img src="mentor.jpg" width="150" height="150" alt="AI Mentor">
+      <h3>AI Mentor Support</h3>
+      <p>Real‑time hints, feedback and explanations.</p>
+    </div>
+    <div>
+      <img src="shield.jpg" width="150" height="150" alt="Cybersecurity">
+      <h3>Defensive Cybersecurity</h3>
+      <p>Focused on ethical skills and real‑world threats.</p>
+    </div>
+    <div>
+      <img src="joystick.png" width="150" height="150" alt="Gamified Learning">
+      <h3>Gamified Learning</h3>
+      <p>Earn points, unlock levels, and master challenges.</p>
+    </div>
+  </section>
+
+  <div class="testimonial">
+    “Finally, a platform that makes learning cybersecurity fun and practical.” — Beta Tester, 23
+  </div>
+
+  <footer>
+    Backed by educators and professionals | Terms | Privacy | Accessibility
+  </footer>
+
+  <script>
+    function openModal() {
+      document.getElementById("demoModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("demoModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == document.getElementById("demoModal")) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>
